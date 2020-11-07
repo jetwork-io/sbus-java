@@ -70,7 +70,7 @@ public class SBus {
 	    channels[4]  = (payload[5] >> 4 & 0x0F) | (payload[6] << 4 & 0x7F0);
         channels[5]  = (payload[6] >> 7 & 0x01) | (payload[7] << 1 & 0x1FE) | (payload[8] << 9 & 0x600);
         channels[6]  = (payload[8] >> 2 & 0x3F) | (payload[9] << 6 & 0x7C0);
-        channels[7]  = (payload[9] >> 5 & 0x1F) | (payload[10] << 3 & 0x7F8);
+        channels[7]  = (payload[9] >> 5 & 0x07) | (payload[10] << 3 & 0x7F8);
         
 	    channels[8]  = (payload[11]  & 0xFF) | (payload[12] << 8 & 0x0700);
 	    channels[9]  = (payload[12] >> 3 & 0x1F) | (payload[13] << 5 & 0x7E0);
@@ -79,7 +79,7 @@ public class SBus {
 	    channels[12] = (payload[16] >> 4 & 0x0F) | (payload[17] << 4 & 0x7F0);
 	    channels[13] = (payload[17] >> 7 & 0x01) | (payload[18] << 1 & 0x1FE) | (payload[19] << 9  & 0x600);
 	    channels[14] = (payload[19] >> 2 & 0x3F) | (payload[20] << 6 & 0x7C0);
-	    channels[15] = (payload[20] >> 5 & 0x1F) | (payload[21] << 3 & 0x7F8);
+	    channels[15] = (payload[20] >> 5 & 0x07) | (payload[21] << 3 & 0x7F8);
 		
 	    return channels;
 	}
